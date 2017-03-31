@@ -1,0 +1,16 @@
+package com.objis.demojdbc;
+
+public class OffreStage {
+	private String nomE;
+	private String libele;
+	private String descriptif;
+	private String domaine;
+	private String dateD;// en date
+	private int duree; //en jours
+	private String cheminOffre;
+	private boolean valide;
+
+	
+	
+	
+}

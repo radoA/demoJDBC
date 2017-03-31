@@ -1,0 +1,29 @@
+package com.objis.demojdbc;
+
+import java.sql.DriverManager;
+
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.Statement;
+
+public class DemoJdbc {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public static void sauverEnBase(String personne){
+		String url = "jdbc:mysql://localhost/formation";
+		String login = "root";
+		String passwd = "";
+		Connection cn =null;
+		Statement st=null;
+		try{
+			// Etape 1 : Chargement du driver
+			Class.forName("com.mysql.jdbc.Driver");
+			// Etape 2 : récupération de la connexion
+			
+		}
+		
+	}
+}

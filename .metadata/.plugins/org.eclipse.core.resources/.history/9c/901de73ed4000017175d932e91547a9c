@@ -1,0 +1,46 @@
+package com.objis.demojdbc;
+
+import java.util.ArrayList;
+
+public class TestCreation {
+	
+	public static void viewList(ArrayList<OffreStage> list){
+		for (OffreStage offreStage : list) {
+			System.out.println(offreStage.toString());
+			System.out.println("\n\n");
+		}
+	}
+	
+	public static void main(String[] args) {
+		//création d'entreprise
+		Entreprise e1 = new Entreprise("Airbus", "3 avenue de toulouse", 31400, "Toulouse", "rh@airbus.com", "0658746284", "Aviation");
+		Entreprise e2 = new Entreprise("Atos", "3 avenue de france", 91000, "Evry", "rh@atos.com", "0658748584", "devellopement");
+		Entreprise e3 = new Entreprise("Genopole", "3 avenue de picard", 91400, "Evry", "rh@genopole.com", "0658746284", "R&D");
+		Entreprise e4 = new Entreprise("meetic", "3 avenue de paris", 77400, "paris", "rh@meetic.com", "0658749084", "web");
+		
+		//insertion dans la table Entreprise
+		 BaseDeDonne.create(e1);
+		 BaseDeDonne.create(e2);
+		 BaseDeDonne.create(e3);
+		 BaseDeDonne.create(e4);
+		 
+		 //création d'une offre de stage
+		 OffreStage o1 = new OffreStage(1, "libele-ibisc", "descriptif-ibisc", "domaineibisc",  "dateD", 45, "cheminOffre-ibisc", 1);
+		 OffreStage o2 = new OffreStage(2, "libele-Atos", "descriptif-Atos", "domaine-Atos",  "dateD-Atos", 45, "cheminOffre-Atos", 1);
+		 OffreStage o3 = new OffreStage(3, "libele-Genopole", "descriptif-Genopole", "domaine-Genopole",  "dateD-Genopole", 45, "cheminOffre-Genopole", 1);
+		 OffreStage o4 = new OffreStage(4, "libele-meetic", "descriptif-meetic", "domaine-meetic",  "dateD-meetic", 45, "cheminOffre-meetic", 1);
+
+		//insertion dans la table OffreStage
+		 BaseDeDonne.create(o1);
+		 BaseDeDonne.create(o2);
+		 BaseDeDonne.create(o3);
+		 BaseDeDonne.create(o4);
+		 
+		 //extraction des données dans la table offrestage
+		 ArrayList<OffreStage> offres = new ArrayList<OffreStage>();
+		 offres = BaseDeDonne.extract("offrestage");
+		 viewList(offres);
+		 //une méthode qui transforme le nom de l'entreprise en IDE(clé  primaire)
+	}
+
+}

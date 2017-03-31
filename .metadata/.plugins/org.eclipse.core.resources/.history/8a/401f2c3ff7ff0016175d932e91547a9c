@@ -1,0 +1,85 @@
+package com.objis.demojdbc;
+
+import java.sql.SQLException;
+import java.sql.PreparedStatement;
+//PARTIE METIER
+
+public class BaseDeDonne {
+	// inserer une Entreprise dans la table Entreprise
+	public static boolean create(Entreprise e) {
+		try {
+			// Creation d'une requete SQL
+			// String sql = "insert into entreprise (`nom`, `adresseNumeroRue`,
+			// `adresseCodePostal`, `adresseVille`, `mail`, `telephone`,
+			// `secteurActivite`) values (?,?,?,?,?,?,?)";
+
+			String sql = "INSERT INTO entreprise (`nom`,`adresseNumeroRue`,`adresseCodePostal`,`adresseVille`,`mail`,`telephone`,`secteurActivite`) VALUES ("
+					+ "'" + e.getNom() + "'" + "," + "'" + e.getAdresseNumeroRue() + "'" + ","
+					+ e.getAdresseCodePostal() + "," + "'" + e.getAdresseVille() + "'" + "," + "'" + e.getMail() + "'"
+					+ "," + "'" + e.getTelephone() + "'" + "," + "'" + e.getSecteurActivite() + "'" + ")";
+
+			//System.out.println(sql);
+			// Etape 3 : Creation d'un Statement
+			PreparedStatement st = Connexion.getCn().prepareStatement(sql);
+			/*
+			 * st.setString(1, e.getNom()); st.setString(2,
+			 * e.getAdresseNumeroRue()); st.setInt(3, e.getAdresseCodePostal());
+			 * st.setString(4, e.getAdresseVille()); st.setString(5,
+			 * e.getMail()); st.setString(6, e.getTelephone()); st.setString(7,
+			 * e.getSecteurActivite());
+			 */
+			// Etape 4 : Execution de la requete
+			if (st.executeUpdate(sql) == 1) {
+				st.close();
+				return true;
+			}
+			st.close();
+		} catch (SQLException ex) {
+			System.out.println("Erreur SQL");
+		}
+		return false;
+	}
+
+	// inserer une offre de stage dans table OffeStage
+
+	public static boolean create(OffreStage o) { 
+		try { 
+				// Creation d'unerequete SQL 
+				String sql ="INSERT INTO offrestage (`IDE`,`LIBELLEOFFRE`,`DESCRIPTIFOFFRE`,`DOMAINEOFFRE`,`DATEDEBUTOFFRE`,`DUREEOFFRE`,`CHEMINOFFRE` , `VALIDE`) VALUES (" + o.getNomE()+",'" +o.getLibele()+"','"+ o.getDescriptif() + "','" +o.getDomaine()+"','"+ o.getDateD() +"'," + o.getDuree() + "','" + o.getCheminOffre() + o.isValide()+")";
+
+	  
+				//System.out.println(sql); 
+				// Etape 3 : Creation d'un Statement
+				PreparedStatement st = Connexion.getCn().prepareStatement(sql);
+	  
+				// Etape 4 : Execution de la requete 
+				if (st.executeUpdate(sql) == 1) {
+					st.close();
+					return true;
+				} 
+				st.close(); 
+			}
+		catch(SQLException ex)
+		{
+			System.out.println("Erreur SQL");
+		}
+		return false;
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+// extraire/lister dans une Liste les offres de stages
+
+// rechercher un élement
+
+// supprimer
+
+// affichage: consultation des offres de stage
+
+}

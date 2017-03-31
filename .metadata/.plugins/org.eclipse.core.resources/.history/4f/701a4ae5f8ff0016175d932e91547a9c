@@ -1,0 +1,100 @@
+package com.objis.demojdbc;
+
+public class OffreStage {
+	private String nomE;
+	private String libele;
+	private String descriptif;
+	private String domaine;
+	private String dateD;// en date
+	private int duree; //en jours
+	private String cheminOffre;
+	private int valide;
+	
+	public OffreStage() {
+		super();
+	}
+
+	public OffreStage(String nomE, String libele, String descriptif, String domaine, String dateD, int duree,
+			String cheminOffre, int valide) {
+		super();
+		this.nomE = nomE;
+		this.libele = libele;
+		this.descriptif = descriptif;
+		this.domaine = domaine;
+		this.dateD = dateD;
+		this.duree = duree;
+		this.cheminOffre = cheminOffre;
+		this.valide = valide;
+	}
+
+	public String getNomE() {
+		return nomE;
+	}
+
+	public void setNomE(String nomE) {
+		this.nomE = nomE;
+	}
+
+	public String getLibele() {
+		return libele;
+	}
+
+	public void setLibele(String libele) {
+		this.libele = libele;
+	}
+
+	public String getDescriptif() {
+		return descriptif;
+	}
+
+	public void setDescriptif(String descriptif) {
+		this.descriptif = descriptif;
+	}
+
+	public String getDomaine() {
+		return domaine;
+	}
+
+	public void setDomaine(String domaine) {
+		this.domaine = domaine;
+	}
+
+	public String getDateD() {
+		return dateD;
+	}
+
+	public void setDateD(String dateD) {
+		this.dateD = dateD;
+	}
+
+	public int getDuree() {
+		return duree;
+	}
+
+	public void setDuree(int duree) {
+		this.duree = duree;
+	}
+
+	public String getCheminOffre() {
+		return cheminOffre;
+	}
+
+	public void setCheminOffre(String cheminOffre) {
+		this.cheminOffre = cheminOffre;
+	}
+
+	public int isValide() {
+		return valide;
+	}
+
+	public void setValide(int valide) {
+		this.valide = valide;
+	}
+
+	@Override
+	public String toString() {
+		return "OffreStage [nomE=" + nomE + ", libele=" + libele + ", descriptif=" + descriptif + ", domaine=" + domaine
+				+ ", dateD=" + dateD + ", duree=" + duree + ", cheminOffre=" + cheminOffre + ", valide=" + valide + "]";
+	}
+
+}

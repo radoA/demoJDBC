@@ -1,0 +1,17 @@
+package com.objis.demojdbc;
+
+public class DemoJdbc {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public static void sauverEnBase(String personne){
+		String url = "jdbc:mysql://localhost/formation";
+		String login = "root";
+		String passwd = "";
+		Connexion cn =null;
+		
+	}
+}

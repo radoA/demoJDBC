@@ -1,0 +1,24 @@
+package com.objis.demojdbc;
+
+public class TestCreation {
+
+	public static void main(String[] args) {
+		//création d'entreprise
+		Entreprise e1 = new Entreprise("Airbus", "3 avenue de larc en ciel", 31400, "Toulouse", "rh@airbus.com", "0658746284", "Aviation");
+		Entreprise e2 = new Entreprise("Atos", "3 avenue de france", 91000, "Evry", "rh@atos.com", "0658748584", "devellopement");
+		Entreprise e3 = new Entreprise("Genopole", "3 avenue de picard", 91400, "Evry", "rh@genopole.com", "0658746284", "R&D");
+		Entreprise e4 = new Entreprise("meetic", "3 avenue de paris", 77400, "paris", "rh@meetic.com", "0658749084", "web");
+		
+		//insertion dans la table Entreprise
+		 BaseDeDonne.create(e1);
+		 BaseDeDonne.create(e2);
+		 BaseDeDonne.create(e3);
+		 BaseDeDonne.create(e4);
+		 
+		 //création d'offre de stage
+		 OffreStage o1 = new OffreStage("15", "libele-ibisc", "descriptif-ibisc", "domaineibisc",  "dateD", 45, "cheminOffre-ibisc", 1);
+		 
+		 //une méthode qui transforme le nom de l'entreprise en IDE(clé  primaire)
+	}
+
+}

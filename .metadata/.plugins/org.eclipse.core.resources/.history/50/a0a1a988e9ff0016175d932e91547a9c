@@ -1,0 +1,74 @@
+package com.objis.demojdbc;
+
+public class OffreStage {
+	private String nomE;
+	private String domaine;
+	private String libele;
+	private String dateD;// en date
+	private int duree; //en jours
+	private String cheminOffre;
+	private String descriptif;
+	public OffreStage() {
+		super();
+	}
+	public OffreStage(String nomE, String domaine, String libele, String dateD, int duree, String cheminOffre,
+			String descriptif) {
+		super();
+		this.nomE = nomE;
+		this.domaine = domaine;
+		this.libele = libele;
+		this.dateD = dateD;
+		this.duree = duree;
+		this.cheminOffre = cheminOffre;
+		this.descriptif = descriptif;
+	}
+	public String getNomE() {
+		return nomE;
+	}
+	public void setNomE(String nomE) {
+		this.nomE = nomE;
+	}
+	public String getDomaine() {
+		return domaine;
+	}
+	public void setDomaine(String domaine) {
+		this.domaine = domaine;
+	}
+	public String getLibele() {
+		return libele;
+	}
+	public void setLibele(String libele) {
+		this.libele = libele;
+	}
+	public String getDateD() {
+		return dateD;
+	}
+	public void setDateD(String dateD) {
+		this.dateD = dateD;
+	}
+	public int getDuree() {
+		return duree;
+	}
+	public void setDuree(int duree) {
+		this.duree = duree;
+	}
+	public String getCheminOffre() {
+		return cheminOffre;
+	}
+	public void setCheminOffre(String cheminOffre) {
+		this.cheminOffre = cheminOffre;
+	}
+	public String getDescriptif() {
+		return descriptif;
+	}
+	public void setDescriptif(String descriptif) {
+		this.descriptif = descriptif;
+	}
+	@Override
+	public String toString() {
+		return "OffreStage [nomE=" + nomE + ", domaine=" + domaine + ", libele=" + libele + ", dateD=" + dateD
+				+ ", duree=" + duree + ", cheminOffre=" + cheminOffre + ", descriptif=" + descriptif + "]";
+	}
+	
+	
+}
